@@ -44,8 +44,8 @@ Confobo is a Majordomo Telegram Bot aiming to help professional conference organ
 
 ## Authors
 
-* @lig
-* @Deepwalker
+* [lig](Serge Matveenko)
+* [Deepwalker](Mikhail Krivushin)
 
 ## License
 
