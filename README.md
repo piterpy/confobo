@@ -15,6 +15,7 @@ Confobo is a Majordomo Telegram Bot aiming to help professional conference organ
 * Allows to select the event/talk user is being attending
 * Allows to vote (choice out of 5 stars) for the current event
 * Allows to pass a question to the speaker/host of the current event
+* Allows to send a message to the conference's helpdesk
 
 ### Venue
 
