@@ -45,7 +45,7 @@ Confobo is a Majordomo Telegram Bot aiming to help professional conference organ
 
 ## Development stages
 
-###Stage 0
+### Stage 0
 * Bot exists,
 * Bot responds to commands:
     * \help - shows list of commands
@@ -55,7 +55,7 @@ Confobo is a Majordomo Telegram Bot aiming to help professional conference organ
 	* \vote streamId - a stub to vote (choice out of 5 stars) for the current event
 	* \helpdesk - a stub to send a message to the conference's helpdesk
 
-###Stage 1
+### Stage 1
 * Bot responds to commands:
 	* \start - creates keyboard
 	* \stop - removes the user from all subscription lists
@@ -65,7 +65,7 @@ Confobo is a Majordomo Telegram Bot aiming to help professional conference organ
 * Tests are written for key functionality
 * DB scheme is created. It stores users, their preferred talks and events, votes, questions for each talk, questions to helpdesk
 
-###Stage 2
+### Stage 2
 * Confobo uses a list of the one-time passwords to authenticate the conference attendies
 * User can select preferred talks and events (e.g. buttons under each talk: remind me, subscribe, ask a question, etc. )
 * Bot reminds of the preferred talks and events
@@ -73,7 +73,7 @@ Confobo is a Majordomo Telegram Bot aiming to help professional conference organ
 * Allows to pass a question to the speaker/host of the current event
 * Tests are added for key functionality
 
-###Stage 3
+### Stage 3
 * Shows the conference venue address on the map
 * Helps to find POIs near the venue
 * Tests are added for key functionality
