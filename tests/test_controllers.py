@@ -1,8 +1,8 @@
 import pytest
-from mock import Mock
+from unittest.mock import Mock
 
-from confobo.event import Event
-from confobo.user import User
+from confobo.models.event import Event
+from confobo.models.user import User
 from confobo import controllers
 from confobo import persistence
 
@@ -22,5 +22,5 @@ def test_vote(fixture_user, fixture_event):
     vote_acceptable = 4
     vote_unacceptable = 6
 
-    assert controllers.vote(fixture_user, vote_acceptable, fixture_event) is True
-    assert controllers.vote(fixture_user, vote_unacceptable, fixture_event) is False
+    assert controllers.voting.vote(fixture_user, vote_acceptable, fixture_event) is True
+    assert controllers.voting.vote(fixture_user, vote_unacceptable, fixture_event) is False
