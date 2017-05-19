@@ -1,1 +1,1 @@
-from . import voting
+from . import voting, schedule

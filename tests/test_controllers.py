@@ -24,3 +24,9 @@ def test_vote(fixture_user, fixture_event):
 
     assert controllers.voting.vote(fixture_user, vote_acceptable, fixture_event) is True
     assert controllers.voting.vote(fixture_user, vote_unacceptable, fixture_event) is False
+
+
+def test_schedule():
+    assert controllers.schedule.get_schedule('2017-06-01') == '2017-06-01'
+    with pytest.raises(controllers.schedule.NoSuchDay):
+        controllers.schedule.get_schedule('2020-06-04')
