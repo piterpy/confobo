@@ -1,11 +1,18 @@
-CONFERENCE_DAYS = ('2017-06-01', '2017-06-02')
+from confobo.persistence import schedule
 
 
-class NoSuchDay(Exception):
+class NoSuchDayError(Exception):
     pass
 
 
 def get_schedule(date: str) -> str:
-    if date not in CONFERENCE_DAYS:
-        raise NoSuchDay()
+    """
+    Return conference schedule for a given day
+
+    :param date: date for which schedule has been requested
+
+    :return: schedule for the date
+    """
+    if date not in schedule.get_conference_days():
+        raise NoSuchDayError()
     return date

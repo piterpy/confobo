@@ -34,5 +34,5 @@ def test_remove_subs(fixture_user):
 
 def test_schedule():
     assert controllers.schedule.get_schedule('2017-06-01') == '2017-06-01'
-    with pytest.raises(controllers.schedule.NoSuchDay):
+    with pytest.raises(controllers.schedule.NoSuchDayError):
         controllers.schedule.get_schedule('2020-06-04')
