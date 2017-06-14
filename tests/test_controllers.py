@@ -18,12 +18,18 @@ def fixture_event():
 
 
 def test_vote(fixture_user, fixture_event):
-    persistence.save_vote = Mock(return_value=True)
+    persistence.voting.save_vote = Mock(return_value=True)
     vote_acceptable = 4
     vote_unacceptable = 6
 
     assert controllers.voting.vote(fixture_user, vote_acceptable, fixture_event) is True
     assert controllers.voting.vote(fixture_user, vote_unacceptable, fixture_event) is False
+
+
+def test_remove_subs(fixture_user):
+    persistence.subscriptions.remove_all = Mock(return_value=True)
+
+    assert controllers.subscriptions.remove_all(fixture_user) is True
 
 
 def test_schedule():

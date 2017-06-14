@@ -1,6 +1,6 @@
 from confobo.models.event import Event
 from confobo.models.user import User
-from confobo import persistence
+from confobo.persistence import voting
 
 
 LOWEST_VOTE = 1
@@ -18,6 +18,6 @@ def vote(user: User, choice: int, event: Event) -> bool:
     :return: True if the vote was saved, False otherwise
     """
     if LOWEST_VOTE <= choice <= HIGHEST_VOTE:
-        return persistence.save_vote(user, choice, event)
+        return voting.save_vote(user, choice, event)
     else:
         return False
