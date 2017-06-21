@@ -7,6 +7,10 @@ LOWEST_VOTE = 1
 HIGHEST_VOTE = 5
 
 
+class BadVoteValueError(Exception):
+    pass
+
+
 def vote(user: User, choice: int, event: Event) -> bool:
     """
     Save user's vote for the current event
@@ -20,4 +24,4 @@ def vote(user: User, choice: int, event: Event) -> bool:
     if LOWEST_VOTE <= choice <= HIGHEST_VOTE:
         return voting.save_vote(user, choice, event)
     else:
-        return False
+        raise BadVoteValueError('You can give from {} to {} stars, not {}'.format(LOWEST_VOTE, HIGHEST_VOTE, choice))
